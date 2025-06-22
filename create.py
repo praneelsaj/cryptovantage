@@ -1,12 +1,13 @@
 import ccxt
-import logging
+import transformers
+import vaderSentiment
+import pandas
+import numpy
+import python
+import dotenv
 
 # Setup logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-
-# Replace with your actual Binance API credentials
-API_KEY = 'your_api_key_here'
-API_SECRET = 'your_api_secret_here'
 
 def main():
     # Connect to Binance
