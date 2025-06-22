@@ -1,0 +1,7 @@
+import ccxt
+import transformers
+import vaderSentiment
+import pandas
+import numpy
+import python
+import dotenv
