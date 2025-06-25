@@ -46,40 +46,45 @@ for sym in symbols:
 
 
 
-# Example: Withdraw
+#withdraw
 # withdrawal = exchange.withdraw('BTC', 0.001, 'your_btc_address_here')
 # print("Withdrawal result:", withdrawal)
 
 
-# Example: Deposit address
+#deposit
 #address = exchange.get_deposit_address(coin='BTC')
 #deposit_address = exchange.fetch_deposit_address('BTC')
 #print("BTC deposit address:", deposit_address['address'])
 
-# Simulate market buy and sell orders (no real orders placed)
+#simulation
 def simulate_market_order(order_type, symbol, amount):
     print(f"Simulating {order_type} order for {amount} {symbol.split('/')[0]} at market price...")
     try:
+        #asks for binance for latest price info for the trading pair
         ticker = exchange.fetch_ticker(symbol)
+        #last is the latest price
         price = ticker['last']
+        #buy
         if order_type == 'buy':
             cost = amount * price
             print(f"Would BUY {amount} {symbol.split('/')[0]} at {price} {symbol.split('/')[1]} (Total cost: {cost} {symbol.split('/')[1]})")
+        #sell
         elif order_type == 'sell':
             proceeds = amount * price
             print(f"Would SELL {amount} {symbol.split('/')[0]} at {price} {symbol.split('/')[1]} (Total proceeds: {proceeds} {symbol.split('/')[1]})")
         else:
             print("Unknown order type.")
+    #error
     except Exception as e:
         print(f"Simulation failed: {e}")
 
-# Simulate a market buy order for 0.01 LTC
+# simulated buy for ETH
 simulate_market_order('buy', 'ETH/USD', 0.001)
 
-# Simulate a market sell order for 0.01 ETHC
+# simulated sell for ETH
 simulate_market_order('sell', 'ETH/USD', 0.001)
 
-# Simulate a market buy order for 0.001 BTC
+# simulated buy for BTC
 simulate_market_order('buy', 'BTC/USD', 0.001)
-# Simulate a market sell order for 0.001 BTC
+# simulated sell for BTC
 simulate_market_order('sell', 'BTC/USD', 0.001)
