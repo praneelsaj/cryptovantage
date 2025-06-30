@@ -1,7 +1,7 @@
 import ccxt
 
-api_key="RvsiWCgdichqRk6oVcUSKxJEsOZoDHhH3QwItRanHtRES0Ss18ARuH09fP6ejL4A"
-secret_key="iv29pxso7pW1RSuQBNWmfplXIk5uRCvpz8cSbEb1nGVBpwOJJMwwkFTSanSsr6e3"
+api_key="oGH1SeQzUhNWAJe7sYWNdUWIKVkzo5L45kFcGJuPxrjaSgqIBfD6bxba9TUkxEPB"
+secret_key="SEgi5MWboiJiDkgOjyXqPvdez9lhd9M635YfKHOKnlbrqvjjVfa55tGOK2RVSKsT"
 
 exchange = ccxt.binanceus({
     'apiKey': api_key,
@@ -35,56 +35,40 @@ for sym in symbols:
     except Exception as e:
         print(f"Could not fetch price for {sym}: {e}")
 
+# Initialize balance
+sim_balance = 500
+trade_amount = 20
 
-#buy
-#buy_order = exchange.create_market_buy_order('BTC/USD', 0.001)
-#print("Buy order result:", buy_order)
+# Simulated ticker data
+ticker = {'symbol': 'BTC', 'last': 9500}
+ticker2 = {'symbol': 'ETH', 'last': 2200}
 
-#sell
-#sell_order = exchange.create_market_sell_order('BTC/USD', 0.001)
-#print("Sell order result:", sell_order)
+# Function to simulate a trade decision
+def simulate_trade(ticker_data, threshold):
+    global sim_balance
+    symbol = ticker_data['symbol']
+    price = ticker_data['last']
 
+    if price < threshold:
+        print(f"Buying ${trade_amount} of {symbol}")
+        sim_balance -= trade_amount
+    elif price > threshold:
+        print(f"Selling ${trade_amount} of {symbol}")
+        sim_balance += trade_amount
+    else:
+        print(f"Holding {symbol}, price is at threshold")
 
+# Display initial balance
+print(f"Initial Balance: ${sim_balance}")
 
-#withdraw
-# withdrawal = exchange.withdraw('BTC', 0.001, 'your_btc_address_here')
-# print("Withdrawal result:", withdrawal)
+# Run trade simulations
+simulate_trade(ticker, 10500)
+simulate_trade(ticker2, 2000)
 
+# Display updated balance
+print(f"Post-Trade Balance: ${sim_balance}")
 
-#deposit
-#address = exchange.get_deposit_address(coin='BTC')
-#deposit_address = exchange.fetch_deposit_address('BTC')
-#print("BTC deposit address:", deposit_address['address'])
-
-#simulation
-def simulate_market_order(order_type, symbol, amount):
-    print(f"Simulating {order_type} order for {amount} {symbol.split('/')[0]} at market price...")
-    try:
-        #asks for binance for latest price info for the trading pair
-        ticker = exchange.fetch_ticker(symbol)
-        #last is the latest price
-        price = ticker['last']
-        #buy
-        if order_type == 'buy':
-            cost = amount * price
-            print(f"Would BUY {amount} {symbol.split('/')[0]} at {price} {symbol.split('/')[1]} (Total cost: {cost} {symbol.split('/')[1]})")
-        #sell
-        elif order_type == 'sell':
-            proceeds = amount * price
-            print(f"Would SELL {amount} {symbol.split('/')[0]} at {price} {symbol.split('/')[1]} (Total proceeds: {proceeds} {symbol.split('/')[1]})")
-        else:
-            print("Unknown order type.")
-    #error
-    except Exception as e:
-        print(f"Simulation failed: {e}")
-
-# simulated buy for ETH
-simulate_market_order('buy', 'ETH/USD', 0.001)
-
-# simulated sell for ETH
-simulate_market_order('sell', 'ETH/USD', 0.001)
-
-# simulated buy for BTC
-simulate_market_order('buy', 'BTC/USD', 0.001)
-# simulated sell for BTC
-simulate_market_order('sell', 'BTC/USD', 0.001)
+# Withdraw all funds
+print("Withdrawing balance from account...")
+sim_balance = 0
+print(f"Final Balance: ${sim_balance}")
