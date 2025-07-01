@@ -54,7 +54,7 @@ def analyze_sentiment(text):
     return analyzer.polarity_scores(text)["compound"]
 #example RSS feeds
 feeds = [
-    "https://www.coindesk.com/markets/2025/06/30/bitcoin-carries-crypto-markets-in-2025s-first-half-as-altcoins-crumble-whats-next",
+    "https://www.coindesk.com/arc/outboundfeeds/rss",
     "https://cointelegraph.com/rss"
 ]
 
