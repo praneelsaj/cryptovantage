@@ -4,7 +4,7 @@ import pandas as pd
 # Example RSS feeds
 feeds = [
     "https://www.coindesk.com/markets/2025/06/30/bitcoin-carries-crypto-markets-in-2025s-first-half-as-altcoins-crumble-whats-next",
-    "https://cointelegraph.com/rss"
+    "https://cointelegraph.com/news/bitcoin-new-all-time-high-now-inevitable-btc-price-liquidity-109k"
 ]
 
 # Pull and combine articles
