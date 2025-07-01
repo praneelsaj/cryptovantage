@@ -28,7 +28,7 @@ def fetch_rss_articles(feed_url, limit=5):
     for entry in feed.entries[:limit]:
         articles.append({
             "title": entry.get("title", ""),
-            "content": entry.get("summary", "")  # Use 'description' if needed
+            "content": entry.get("summary", "")
         })
     return articles
 
