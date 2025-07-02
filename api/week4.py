@@ -65,7 +65,7 @@ def generate_trade_signal(label):
     if label == "Positive":
         return "Consider Buying"
     elif label == "Negative":
-        return "Reduce Exposure / Avoid Entry"
+        return "Reduce Exposure / Sell"
     else:
         return "Hold / Monitor"
 
