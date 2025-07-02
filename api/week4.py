@@ -11,7 +11,7 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 try:
     summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
 except Exception as e:
-    print("❌ Failed to load summarizer:", e)
+    print("Failed to load summarizer:", e)
     summarizer = None
 
 #initializes sentiment analyzer (VADER)
