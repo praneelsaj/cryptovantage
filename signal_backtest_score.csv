@@ -1,0 +1,51 @@
+Date,Coin,Market Movement,Decision,Score,New Balance
+2025-07-01,BTC,Down,Sell or Hold,20,520
+2025-07-01,ETH,Down,Hold / Monitor,0,500
+2025-07-02,BTC,Up,Hold / Monitor,0,520
+2025-07-02,ETH,Up,Buy,20,520
+2025-07-03,BTC,Up,Hold / Monitor,0,520
+2025-07-03,ETH,Up,Hold / Monitor,0,520
+2025-07-04,BTC,Down,Sell or Hold,20,540
+2025-07-04,ETH,Down,Hold / Monitor,0,520
+2025-07-05,BTC,Up,Buy,20,560
+2025-07-05,ETH,Flat,Hold,0,520
+2025-07-06,BTC,Up,Hold / Monitor,0,560
+2025-07-06,ETH,Up,Hold / Monitor,0,520
+2025-07-07,BTC,Up,Hold / Monitor,0,560
+2025-07-07,ETH,Up,Hold / Monitor,0,520
+2025-07-08,BTC,Up,Hold / Monitor,0,560
+2025-07-08,ETH,Up,Hold / Monitor,0,520
+2025-07-09,BTC,Down,Hold / Monitor,0,560
+2025-07-09,ETH,Down,Hold / Monitor,0,520
+2025-07-10,BTC,Up,Hold / Monitor,0,560
+2025-07-10,ETH,Up,Hold / Monitor,0,520
+2025-07-11,BTC,Up,Hold / Monitor,0,560
+2025-07-11,ETH,Up,Hold / Monitor,0,520
+2025-07-12,BTC,Down,Hold / Monitor,0,560
+2025-07-12,ETH,Up,Hold / Monitor,0,520
+2025-07-13,BTC,Up,Hold / Monitor,0,560
+2025-07-13,ETH,Up,Sell or Hold,-20,500
+2025-07-14,BTC,Up,Hold / Monitor,0,560
+2025-07-14,ETH,Up,Hold / Monitor,0,500
+2025-07-15,BTC,Down,Hold / Monitor,0,560
+2025-07-15,ETH,Up,Hold / Monitor,0,500
+2025-07-16,BTC,Down,Hold / Monitor,0,560
+2025-07-16,ETH,Up,Hold / Monitor,0,500
+2025-07-17,BTC,Down,Hold / Monitor,0,560
+2025-07-17,ETH,Up,Hold / Monitor,0,500
+2025-07-18,BTC,Up,Hold / Monitor,0,560
+2025-07-18,ETH,Up,Hold / Monitor,0,500
+2025-07-19,BTC,Up,Hold / Monitor,0,560
+2025-07-19,ETH,Down,Hold / Monitor,0,500
+2025-07-20,BTC,Down,Hold / Monitor,0,560
+2025-07-20,ETH,Down,Hold / Monitor,0,500
+2025-07-21,BTC,Down,Hold / Monitor,0,560
+2025-07-21,ETH,Up,Buy,20,520
+2025-07-22,BTC,Down,Hold / Monitor,0,560
+2025-07-22,ETH,Up,Hold / Monitor,0,520
+2025-07-23,BTC,Up,Hold / Monitor,0,560
+2025-07-23,ETH,Up,Hold / Monitor,0,520
+2025-07-24,BTC,Up,Hold / Monitor,0,560
+2025-07-24,ETH,Up,Hold / Monitor,0,520
+2025-07-25,BTC,Down,Sell or Hold,20,580
+2025-07-25,ETH,Down,Hold / Monitor,0,520
